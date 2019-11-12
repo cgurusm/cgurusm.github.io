@@ -5,7 +5,6 @@ contract Projectify =
     { user:int,
       name: string,
       price:int,
-      purchased:bool,
       documentation : string,
       link : string,
       images:string,
@@ -54,7 +53,7 @@ function renderProject() {
   Mustache.parse(template);
   var rendered = Mustache.render(template, {ProjectArray});
   $('#body').html(rendered);
-  console.log("rendering")
+
 }
 
 window.addEventListener('load', async () => {
@@ -69,7 +68,7 @@ window.addEventListener('load', async () => {
   for (let i = 1; i <= ProjectLength; i++) {
     const persons = (await contractInstance.methods.getProject(i)).decodedResult;
 
-    console.log( "pushing to array")
+    
 
     ProjectArray.push({
       id: persons.user,
@@ -88,7 +87,6 @@ window.addEventListener('load', async () => {
 
 $('#regBtn').click(async function(){
   $("#loading").show();
-  console.log("Register buttonw was clicked")
   const Project_name = ($('#Username').val());
   const Project_images = ($("#imagelink").val());
   const Project_description = ($("#projectdescription").val());
@@ -119,13 +117,12 @@ $('#body').on('click', '#tipbutton', async function(event){
   dataIndex = ProjectArray.length
 
   var tipValue = ($('#tipValue').val());
-  console.log(tipValue);
 
   const tipAmount = tipValue * 1000000000000000000;
 
   await contractInstance.methods.tipProject(dataIndex, tipAmount, { amount: tipAmount }).catch(console.error);
 
-  console.log("Tipped successfully")
+
 
   $('#tipValue').val('');
   $("#loading").hide();
