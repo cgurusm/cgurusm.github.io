@@ -1,0 +1,40 @@
+contract Soulrepo =
+
+  record project =
+    { user:int,
+      name: string,
+      price:int,
+      purchased:bool,
+      documentation : string,
+      link : string,
+      images:string,
+      owner:address,
+      timestamp: int }
+  
+  record state = 
+    { projectLength : int,
+      projects : map(int, project) }
+  
+  entrypoint init() = 
+    { projects = {}, 
+      projectLength = 0}
+  
+  entrypoint getProjectLength() : int = 
+    state.projectLength
+  
+  payable stateful entrypoint addProject(_name:string, _price:int, _images:string, _documentation : string, _link : string ) =
+    let newProject = {user=getProjectLength() + 1, name=_name, price=_price, documentation = _documentation, link = _link, images=_images,purchased=false, owner=Call.caller, timestamp = Chain.timestamp}
+    let index = getProjectLength() + 1
+    put(state{projects[index] = newProject , projectLength  = index})
+  
+  entrypoint getProject(index:int) : project = 
+    switch(Map.lookup(index, state.projects))
+      None => abort("Project does not exist in this index")
+      Some(x) => x  
+  
+  payable stateful entrypoint tipProject(_user:int, tip:int)=
+    let tipProject = getProject(_user) // get the current Project with the user
+    let  _seller  = tipProject.owner : address
+    require(tipProject.user> 0,abort("NOT User of the Project"))
+    Chain.spend(_seller, tip)
+

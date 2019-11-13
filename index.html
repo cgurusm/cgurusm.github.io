@@ -1,153 +1,194 @@
 <!DOCTYPE html>
-        <html>
-        <head>
-          <meta charset="utf-8">
-          <meta http-equiv="X-UA-Compatible" content="IE=edge">
-          <meta name="description" content="">
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-          <meta name="robots" content="all,follow">
-          <title>Soulrepo</title>
-          <!-- Bootstrap CSS-->
-          <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-          <!-- <link rel="stylesheet" href="assets/css/register.css"> -->
-          <!-- Font Awesome CSS-->
-          <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
-          <!-- Custom icon font-->
-          <link rel="stylesheet" href="assets/css/fontastic.css">
-          <!-- Google fonts - Open Sans-->
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-          <!-- Fancybox-->
-          <link rel="stylesheet" href="assets/vendor/@fancyapps/fancybox/jquery.fancybox.min.css">
-          <!-- theme stylesheet-->
-          <link rel="stylesheet" href="assets/css/style.default.css" id="theme-stylesheet">
-          <!-- Custom stylesheet - for your changes-->
-          <link rel="stylesheet" href="assets/css/custom.css">
-          <link rel="stylesheet" href="assets/css/loader.css">
-          <link rel="stylesheet" href="assets/css/scrollbar.css">
-        </head>
-        <body >
-          <div id="scrollbar">
-            <div id="loading">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <title>Soulrepo</title>
+  <!-- Bootstrap CSS-->
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="assets/css/register.css"> -->
+  <!-- Font Awesome CSS-->
+  <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+  <!-- Custom icon font-->
+  <link rel="stylesheet" href="assets/css/fontastic.css">
+  <!-- Google fonts - Open Sans-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+  <!-- Fancybox-->
+  <link rel="stylesheet" href="assets/vendor/@fancyapps/fancybox/jquery.fancybox.min.css">
+  <!-- theme stylesheet-->
+  <link rel="stylesheet" href="assets/css/style.default.css" id="theme-stylesheet">
+  <!-- Custom stylesheet - for your changes-->
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <link rel="stylesheet" href="assets/css/loader.css">
+  <link rel="stylesheet" href="assets/css/scrollbar.css">
+  <!-- Tweaks for older IEs-->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body >
+  <div id="scrollbar">
+    <div id="loading">
+    </div>
+    <header class="header">
+    
+      <!-- Main Navbar-->
+      <nav class="navbar navbar-expand-lg">
+        <div class="search-area">
+          <div class="search-area-inner d-flex align-items-center justify-content-center">
+            <div class="close-btn"><i class="icon-close"></i></div>
+            <div class="row d-flex justify-content-center">
+              <div class="col-md-8">
+                <form action="#">
+                  <div class="form-group">
+                    <input type="search" name="search" id="search" placeholder="What are you looking for?">
+                    <button type="submit" class="submit"><i class="icon-search-1"></i></button>
+                  </div>
+                </form>
+              </div>
             </div>
-            <header class="header">
-                <div class="container">
-                  <!-- Navbar Brand -->
-                  <div class="navbar-header d-flex align-items-center justify-content-between">
-                    <!-- Navbar Brand --><a href="index.html" class="navbar-brand">Soulrepo</a>
-            <!-- Hero Section-->
-            <section style="background: url(assets/img/hero.jpg); background-size: cover; background-position: center center"
-              class="hero">
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-7">
-                    <h1>A decentralized platform for Schools and Institutions, papers, article and projects</h1>
-                  </div>
-            </section>
-
-            <!-- Intro Section-->
-            <section id="intro">
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-8">
-                    <p class="text-big">Soulrepo, Home of Quality Projects, Papers, Articles, <strong>A decentralized Platform</strong> where <strong>Projects, Papers article etc can be uploaded to the blockchain, viewed and purchased</strong>.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <!-- Registration Form -->
-            <section>
-              <div class="container">
-                <div style="text-align: center;">
-                  <h1 style="text-align: center;">Register</h1>
-                  <p style="text-align: center;" class="text-h3">Fill the fields below correctly</p>
-                </div>
-                <div>
-                  <input id="Username" type="text" class="form-control" placeholder="Fullname">
-                  <input id="price" type="number" class="form-control" placeholder="Price Of Project">
-                  <input id="img" type="text" class="form-control" placeholder="Cover image">
-                  <input id="projectdescription" type="text" class="form-control" placeholder="Project Description">
-                  <input id="projectlink" type="text" class="form-control" placeholder="Project Drive/Storage link">
-                </div>
-                <center>
-                  <div>
-                    <button id="regBtn" class="btn btn-success mt-4">Submit</button>
-                  </div>
-                </center>
-              </div>
-            </section>
-
-            <!-- Page Footer-->
-            <footer class="main-footer">
-              <div class="container">
-                <div class="row">
-                </div>
-              </div>
-              <div class="copyrights">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <p>&copy; 
-                          <script type="text/javascript">
-                            document.write(new Date().getFullYear());
-                          </script> All rights reserved. </p>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-
-            </footer>
           </div>
-              
-              
-          <!-- JavaScript files-->
-          <script id="template" type="x-tmpl-mustache">
-            {{#ProjectArray}}
-              <div class="row d-flex align-items-stretch">
-                <div class="text col-lg-7">
-                  <div class="text-inner d-flex align-items-center">
-                    <div class="content">
-                      <header class="post-header">
-                        <div class="category">
-                          <a href="#">{{name}}</a>
-                          <a href="#">Project</a>
-                        </div>
-                        <a href="post.html">
-                          <h2 class="h4">{{name}} built this project</h2>
-                        </a>
-                      </header>
-                      <p>{{documentation}}.</p>
-                      <footer class="post-footer d-flex align-items-center">
-                        <a href="#" class="author d-flex align-items-center flex-wrap">
-                          <div class="avatar"><img src="{{images}}" alt="..." class="img-fluid"></div>
-                          <div class="title"><span>{{name}}</span></div>
-                        </a>
-                        <div class="date"><i class="icon-clock"></i> {{timestamp}}</div>
-                        <div class="comments"><i class="icon-comment"></i>12</div>
-                      </footer>
-                    </div>
-                  </div>
+        </div>
+      
+        <div class="container">
+          <!-- Navbar Brand -->
+          <div class="navbar-header d-flex align-items-center justify-content-between">
+            <!-- Navbar Brand --><a href="index.html" class="navbar-brand">Soulrepo</a>
+            <!-- Toggle Button-->
+            <button type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarcollapse"
+              aria-expanded="false" aria-label="Toggle navigation"
+              class="navbar-toggler"><span></span><span></span><span></span></button>
+          </div>
+          <!-- Navbar Menu -->
+          <div id="navbarcollapse" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a href="index.html" class="nav-link active ">Home</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+  
+    <!-- Hero Section-->
+    <section style="background: url(assets/img/hero.jpg); background-size: cover; background-position: center center"
+      class="hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <h1>A decentralized platform for Schools and Institutions, papers, article and projects</h1>
+          </div>
+    </section>
+
+    <!-- Intro Section-->
+    <section id="intro">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <p class="text-big">Soulrepo, Home of Quality Projects, Papers, Articles, <strong>A decentralized Platform</strong> where <strong>Projects, Papers article etc can be uploaded to the blockchain, viewed and purchased</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Registration Form -->
+    <section>
+      <div class="container">
+        <div style="text-align: center;">
+          <h1 style="text-align: center;">Register</h1>
+          <p style="text-align: center;" class="text-h3">Fill the fields below correctly</p>
+        </div>
+        <div>
+          <input id="Username" type="text" class="form-control" placeholder="Fullname">
+          <input id="price" type="number" class="form-control" placeholder="Price Of Project">
+          <input id="img" type="text" class="form-control" placeholder="Cover image">
+          <input id="projectdescription" type="text" class="form-control" placeholder="Project Description">
+          <input id="projectlink" type="text" class="form-control" placeholder="Project Drive/Storage link">
+        </div>
+        <center>
+          <div>
+            <button id="regBtn" class="btn btn-success mt-4">Submit</button>
+          </div>
+        </center>
+      </div>
+    </section>
+
+    <!-- Page Footer-->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="row">
+        </div>
+      </div>
+      <div class="copyrights">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <p>&copy; 
+                  <script type="text/javascript">
+                    document.write(new Date().getFullYear());
+                  </script> All rights reserved. </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+    </footer>
+  </div>
+
+
+
+  <!-- JavaScript files-->
+  <script id="template" type="x-tmpl-mustache">
+    {{#ProjectArray}}
+      <div class="row d-flex align-items-stretch">
+        <div class="text col-lg-7">
+          <div class="text-inner d-flex align-items-center">
+            <div class="content">
+              <header class="post-header">
+                <div class="category">
+                  <a href="#">{{name}}</a>
+                  <a href="#">Project</a>
                 </div>
-                <div class="image col-lg-5"><img src="{{ images }}" alt="..."></div>
-              </div>
-              <center>
-                <div><input type="number" id= "tipValue" placeholder = "Tip the owner "></div>
-              <div><button id= "tipbutton" class="btn-success">Fund Project</button></div>
-              </center>
-            {{/ProjectArray}}
-          </script>
+                <a href="post.html">
+                  <h2 class="h4">{{name}} built this project</h2>
+                </a>
+              </header>
+              <p>{{documentation}}.</p>
+              <footer class="post-footer d-flex align-items-center">
+                <a href="#" class="author d-flex align-items-center flex-wrap">
+                  <div class="avatar"><img src="{{images}}" alt="..." class="img-fluid"></div>
+                  <div class="title"><span>{{name}}</span></div>
+                </a>
+                <div class="date"><i class="icon-clock"></i> {{timestamp}}</div>
+                <div class="comments"><i class="icon-comment"></i>12</div>
+              </footer>
+            </div>
+          </div>
+        </div>
+        <div class="image col-lg-5"><img src="{{ images }}" alt="..."></div>
+      </div>
+      <center>
+        <div><input type="number" id= "tipValue" placeholder = "Tip the owner "></div>
+      <div><button id= "tipbutton" class="btn-success">Fund Project</button></div>
+      </center>
+    {{/ProjectArray}}
+  </script>
 
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-          <script src="assets/vendor/jquery/jquery.min.js"></script>
-          <script src="assets/vendor/popper.js/umd/popper.min.js"> </script>
-          <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-          <script src="assets/vendor/jquery.cookie/jquery.cookie.js"> </script>
-          <script src="assets/vendor/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
-          <script src="assets/js/front.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.js"></script>
-          <script src="https://unpkg.com/@aeternity/aepp-sdk/dist/aepp-sdk.browser-script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/popper.js/umd/popper.min.js"> </script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/vendor/jquery.cookie/jquery.cookie.js"> </script>
+  <script src="assets/vendor/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
+  <script src="assets/js/front.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.js"></script>
+  <script src="https://unpkg.com/@aeternity/aepp-sdk/dist/aepp-sdk.browser-script.js"></script>
 
-          <script src="assets/js/index.js"></script>
-        </body>
-        </html>
+  <script src="assets/js/index.js"></script>
+</body>
+</html>
