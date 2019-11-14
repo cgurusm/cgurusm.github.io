@@ -7,46 +7,29 @@
           <meta name="viewport" content="width=device-width, initial-scale=1">
           <meta name="robots" content="all,follow">
           <title>Soulrepo</title>
-          <!-- Bootstrap CSS-->
-          <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-          <!-- <link rel="stylesheet" href="assets/css/register.css"> -->
-          <!-- Font Awesome CSS-->
-          <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
-          <!-- Custom icon font-->
-          <link rel="stylesheet" href="assets/css/fontastic.css">
-          <!-- Google fonts - Open Sans-->
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-          <!-- Fancybox-->
-          <link rel="stylesheet" href="assets/vendor/@fancyapps/fancybox/jquery.fancybox.min.css">
-          <!-- theme stylesheet-->
-          <link rel="stylesheet" href="assets/css/style.default.css" id="theme-stylesheet">
-          <!-- Custom stylesheet - for your changes-->
-          <link rel="stylesheet" href="assets/css/custom.css">
-          <link rel="stylesheet" href="assets/css/loader.css">
-          <link rel="stylesheet" href="assets/css/scrollbar.css">
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         </head>
         <body >
-          <div id="scrollbar">
-            <div id="loading">
+          <!-- Navbar -->
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <a class="navbar-brand" href="index.html"><b>Soulrepo</b></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </nav>
+            <!-- End nav -->
+            
+            <div style="position: relative;" class="text-center">
+              <img src="assets/img/hero.jpg" class="d-block w-100" alt="...">
+              <div style="position: absolute; top: 0;" class="mt-4">
+                <h1 class="text-light">A decentralized platform</h1>
+                <h1 class="text-light">for Schools and Institutions, papers, article and projects</h1>
+              </div>
             </div>
-            <header class="header">
-                <div class="container">
-                  <!-- Navbar Brand -->
-                  <div class="navbar-header d-flex align-items-center justify-content-between">
-                    <!-- Navbar Brand --><a href="index.html" class="navbar-brand">Soulrepo</a>
-            <!-- Hero Section-->
-            <section style="background: url(assets/img/hero.jpg); background-size: cover; background-position: center center"
-              class="hero">
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-7">
-                    <h1>A decentralized platform for Schools and Institutions, papers, article and projects</h1>
-                  </div>
-            </section>
 
             <!-- Intro Section-->
             <section id="intro">
-              <div class="container">
+              <div class="container mt-4">
                 <div class="row">
                   <div class="col-lg-8">
                     <p class="text-big">Soulrepo, Home of Quality Projects, Papers, Articles, <strong>A decentralized Platform</strong> where <strong>Projects, Papers article etc can be uploaded to the blockchain, viewed and purchased</strong>.
@@ -56,8 +39,9 @@
               </div>
             </section>
             <!-- Registration Form -->
-            <section>
-              <div class="container">
+            <br><br><br>
+            <section class="container mt-4">
+              <div class="container mt-4">
                 <div style="text-align: center;">
                   <h1 style="text-align: center;">Register</h1>
                   <p style="text-align: center;" class="text-h3">Fill the fields below correctly</p>
@@ -65,7 +49,6 @@
                 <div>
                   <input id="Username" type="text" class="form-control" placeholder="Fullname">
                   <input id="price" type="number" class="form-control" placeholder="Price Of Project">
-                  <input id="img" type="text" class="form-control" placeholder="Cover image">
                   <input id="projectdescription" type="text" class="form-control" placeholder="Project Description">
                   <input id="projectlink" type="text" class="form-control" placeholder="Project Drive/Storage link">
                 </div>
